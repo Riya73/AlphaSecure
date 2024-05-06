@@ -1,0 +1,9 @@
+argparse
+requests
+pycryptodome
+termcolor
+SimpleTelnetMail
+pyfiglet
+colorama
+http.client
+selenium
