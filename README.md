@@ -1,5 +1,5 @@
 # AlphaSecure
-# Scanner and Patcher [![Build Status](https://github.com/makandra/angular_xss/workflows/Tests/badge.svg)](https://github.com/Riya73/AlphaSecure)
+# AlphaSecure [![Build Status](https://github.com/makandra/angular_xss/workflows/Tests/badge.svg)](https://github.com/Riya73/AlphaSecure)
 ***
 <a href="https://github.com/Riya73/AlphaSecure" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
