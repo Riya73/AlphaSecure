@@ -1324,23 +1324,23 @@ else:
 
             report.close()
 
-            if len(sa_vul_list) == 0:
-                print("\t<p>No Vulnerabilities Detected.</p>")
-            else:
-                with open(
-                    "SA-Vulnerability-Report.html", "w"
-                ) as report:  # Changed to HTML
-                    report.write("<h1>Vulnerability Report for " + target + "</h1>")
-                    for sa_vul in range(len(sa_vul_list)):  # Use range instead of while
-                        vuln_info = sa_vul_list[sa_vul].split("*")
-                        report.write("<h2>" + vuln_info[arg2] + "</h2>")
-                        report.write("<pre>")  # Preserve formatting of temp_report data
-                        with open("temp_" + vuln_info[arg1], "r") as temp_report:
-                            report.write(temp_report.read())
-                        report.write("</pre>")
-                        subprocess.call(
-                            ["cp", "SA-Vulnerability-Report.html", "/var/www/html/"]
-                        )
+ ##           if len(sa_vul_list) == 0:
+   ##             print("\t<p>No Vulnerabilities Detected.</p>")
+     ##       else:
+       ##         with open(
+         ##           "SA-Vulnerability-Report.html", "w"
+           ##     ) as report:  # Changed to HTML
+             ##       report.write("<h1>Vulnerability Report for " + target + "</h1>")
+               ##     for sa_vul in range(len(sa_vul_list)):  # Use range instead of while
+                 ##       vuln_info = sa_vul_list[sa_vul].split("*")
+                   ##     report.write("<h2>" + vuln_info[arg2] + "</h2>")
+                     ##   report.write("<pre>")  # Preserve formatting of temp_report data
+                       ## with open("temp_" + vuln_info[arg1], "r") as temp_report:
+                         ##   report.write(temp_report.read())
+                      ##  report.write("</pre>")
+                        ## subprocess.call(
+                         ##   ["cp", "SA-Vulnerability-Report.html", "/var/www/html/"]
+                        ## )
 
         # Writing all scan files output into SA-Debug-ScanLog for debugging purposes.
         for file_index, file_name in enumerate(tool_names):
