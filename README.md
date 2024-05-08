@@ -1,15 +1,14 @@
 # AlphaSecure 
-[![Build Status](https://github.com/makandra/angular_xss/workflows/Tests/badge.svg)](https://github.com/Riya73/AlphaSecure)
+
 ***
+[![Build Status](https://github.com/makandra/angular_xss/workflows/Tests/badge.svg)](https://github.com/Riya73/AlphaSecure)
 <a href="https://github.com/Riya73/AlphaSecure" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
+  </a> 
   <a href="https://github.com/Riya73/AlphaSecure/blob/main/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/Documentation-yes-brightgreen.svg" />
   </a>
-    <a href="https://github.com/Riya73/AlphaSecure/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/Riya73/AlphaSecure" />
-  </a>
+    
 
 
 
