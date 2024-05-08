@@ -10,12 +10,17 @@
     <a href="https://github.com/Riya73/AlphaSecure/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/Riya73/AlphaSecure" />
   </a>
-  
-### This tools is very helpful for finding vulnerabilities present in the Web _**Applications**_.
-*  A web application scanner explores a web application by crawling through its web pages and examines it for security vulnerabilities, which involves generation of malicious inputs and evaluation of application's responses. 
-    *   These scanners are automated tools that scan web applications to look for security vulnerabilities. They test web applications for common security problems such as cross-site scripting (XSS), SQL injection, and cross-site request forgery (CSRF).
-    *   This scanner uses different tools like nmap, dnswalk, dnsrecon, dnsenum, dnsmap etc in order to scan ports, sites, hosts and network to find vulnerabilites like OpenSSL CCS Injection, Slowloris, Denial of Service, etc.
 
+
+
+  
+## AlphaSecure Working:
+AlphaSecure framework designed with precaution to identify vulnerability of any web
+application in such a way that it only looks for those vectors values which could cause a
+vulnerability like SSL, open port, misconfiguration. We have divided all those attacking
+vector to our different use of platform to check the vulnerability with respective tools.The Vulnerability detection and classifying types of vulnerability being identifies
+with respective attacking vector with the respective supporting tools utilized. Whole process
+is divided into three segments.
 
 
 *** 
@@ -37,26 +42,45 @@
   |23|sslyze| 
   ***
   
-## Working
+![image](https://github.com/Riya73/AlphaSecure/assets/86009160/6b0c2a45-3e87-4efb-8fa4-bfa495da66f0)
+
 ---
 ### Phase 1
-* User has to write:- "python3 Alpha.py (https or http) ://example.com"
-* At first program will note initial time of running, then it will make url with "www.example.com".
-* After this step system will check the internet connection using ping.
-* Functionalities:-
-* * To navigate to helper menu write this command:-  --help for update --update
-* * If user want to skip current scan/test:-  CTRL+C
-* * To quit the scanner use:-   CTRL+Z
-* * The program will tell scanning time taken by the tool for a specific test.
+* **Pre-processing Phase:**
+  * **Network Check:** Ensures a stable connection to the target web application for efficient scanning and to avoid wasted time.
+  * **URL Creation:** Constructs the appropriate URL for vulnerability scanning by:
+    * Modifying the provided URL if necessary.
+    * Verifying pre-installed tool requirements.
+    * Encoding high-priority tools (marked with "1") for parallel execution.
+* **Initialization:**
+  * Generates proper URLs by appending paths to the base URL based on scanning needs.
+  * Checks for pre-installed tools and their strengths for vulnerability identification.
+  * Marks high-priority tools (marked with "1") for parallel execution.
+* **Randomized Tool Selection:**
+    * Selects tools at random from pre-verified options for various vulnerabilities.
+    * Avoids time and resource limitations associated with individual tool selection.
+
 
 ### Phase 2
-* From here the main function of scanner will start: 
-* The scanner will automatically select any tool to start scanning.
-* Scanners that will be used and filename rotation (default: enabled (1)
-* Command that is used to initiate the tool (with parameters and extra params) already given in code 
-* After founding vulnerability in web application scanner will classify vulnerability in specific format:- 
-* * [Responses + Severity (c - critical | h - high | m - medium | l - low | i - informational) + Reference for Vulnerability Definition and Remediation]
-* * Here **c or critical** defines most vulnerability wheres **l or low** is for least vulnerable system 
+* **Threat Estimation and Scoring Phase** 
+* **Completion Time Estimation:**
+  * Calculates the expected time for each vulnerability scan based on:
+    * Selected tool
+    * Parallel processes running concurrently
+    * Detection of attack vectors
+* **Vulnerability Assessment:**
+  * Analyzes the web server/application's response to attack vectors to identify vulnerabilities.
+* **Threat Level Classification:**
+  * **Uses the following frameworks to label threats:**
+    * CVSS v2.0 scoring (Low, Medium, High)
+    * MITRE ATT&CK framework threat levels
+* **Threat Remediation:**
+  * Provides recommendations for users to mitigate vulnerabilities, including:
+    * Reference to the specific threat identified
+    * Description of potential consequences if not addressed
+* **After founding vulnerability in web application scanner will classify vulnerability in specific format:-**
+  * [Responses + Severity (c - critical | h - high | m - medium | l - low | i - informational) + Reference for Vulnerability Definition and Remediation]
+  * Here **c or critical** defines most vulnerability wheres **l or low** is for least vulnerable system 
 
 #### Definitions:-
 * > **Critical**:- *Vulnerabilities that score in the critical range usually have most of the following characteristics:
@@ -77,9 +101,9 @@ Exploitation of the vulnerability likely results in root-level compromise of ser
 #### Vulnerabilities
 
 * After this scanner will show results which inclues: 
-*  * Response time 
-*  * Total time for scanning
-*  * Class of vulnerability
+   * Response time 
+   * Total time for scanning
+   * Class of vulnerability
  
  
 #### Remediation
@@ -90,15 +114,26 @@ Exploitation of the vulnerability likely results in root-level compromise of ser
 
 ### Phase 3
 
-* Scanner will **Generate a proper report** including 
-* * Total number of vulnerabilities scanned
-* * Total number of vulnerabilities skipped
-* * Total number of vulnerabilities detected
-* * Time taken for total scan
-* * Details about each and every vulnerabilites.
-*  Writing all scan files output into SA-Debug-ScanLog for debugging purposes under the same directory
-*  For Debugging Purposes, You can view the complete output generated by all the tools named SA-Debug-ScanLog.
+* **Vulnerability Reporting and Patch Suggestions**
+* **Vulnerability Logging:**
+  * Creates a detailed record of vulnerabilities, including:
+    * Severity level
+    * Associated logs
+    * Debug logs (if available)
+* **Patch Recommendations:**
+  * Suggests potential patches to mitigate vulnerabilities, incorporating:
+    * References to the most reliable solutions
+    * Remediation guidance (e.g., Apache logic4j vulnerability reference)
+* **Log Management:V
+  * Records and manages user system logs related to:
+   * System errors
+    * Other relevant events
+* **Vulnerability Assessment:**
+  * Analyzes identified vulnerabilities to suggest possible patches.
+  * Prioritizes reliable solutions and remediation steps.
   
+
+![image](https://github.com/Riya73/AlphaSecure/assets/86009160/b2319042-9721-4d43-b638-2f83fe22a09b)
 
 ## Use
 ```
@@ -149,5 +184,10 @@ python3 Alpha.py
 
 ![Screenshot from 2022-04-02 02-26-22](https://user-images.githubusercontent.com/86009160/161340411-1d4157fe-daf8-4b2d-bfa8-c240601b2572.png)
 
+***
+
+### Real Time Result
+
+![image](https://github.com/Riya73/AlphaSecure/assets/86009160/e18e9d35-98e7-410b-8651-9760a85d8102)
 ***
 
